@@ -1,0 +1,23 @@
+{
+  "name": "AmazonScraper",
+  "version": "200",
+  "manifest_version": 2,
+  "icons": {
+    "128": "./icon.png"
+  },
+  "description": "AmazonScraper",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.co.jp/*"],
+      "js": ["jquery-1.12.4.min.js", "isbn.js", "isbn-groups.js", "index.js"],
+      "css": ["index.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "https://honto.jp/*"
+  ]
+}
